@@ -1,0 +1,25 @@
+{
+  "name":"contao-dd/contao-advanced-classes",
+  "description":"Extend the classes of Contao elements",
+  "keywords":["contao", "classes", "advanced", "bootstrap"],
+  "type":"contao-module",
+  "license":"LGPL-3.0+",
+  "authors":[
+    {
+      "name":"Contao Stammtisch Dresden",
+      "homepage":"http://www.contao-dd.de",
+      "role":"Developer",
+      "email": "dev@contao-dd.de"
+    }
+  ],
+  "require":{
+    "contao/core":">=3.2,<=3.5"
+  },
+  "extra":{
+    "contao": {
+      "sources":{
+        "": "system/modules/advanced-classes"
+      }
+    }
+  }
+}
