@@ -9,7 +9,7 @@ Extend the css classes of Contao elements.
 Screenshot
 -----------
 
-![Setting classes for bootstrap](https://pdir.de/contao-dd/Bootstrap-Mockup.png)
+![Setting classes for bootstrap](http://pdir.de/contao-dd/Bootstrap-Mockup.png)
 
 
 System requirements
