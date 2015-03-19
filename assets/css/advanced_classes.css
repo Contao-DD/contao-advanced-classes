@@ -1,0 +1,26 @@
+
+#advancedFormContainer h3 {
+    margin-bottom: 5px;
+}
+
+#advancedFormContainer .ac-w25 {
+    width: 25%;
+    float: left;
+}
+
+#advancedFormContainer .ac-w50 {
+    width: 50%;
+    float: left;
+}
+
+#advancedFormContainer .value.select {
+    background-color: #ccc;
+    padding: 2px;
+    border-radius: 5px;
+    margin-right: 3%;
+    width: 21%;
+}
+
+#advancedFormContainer .value.select select {
+    width: 90%;
+}
