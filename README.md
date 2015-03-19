@@ -9,7 +9,7 @@ Extend the css classes of Contao elements.
 Screenshot
 -----------
 
-![Setting classes for bootstrap](https://pdir.de/contao-dd/Bootstrap-Mockup.png)
+![Setting classes for bootstrap](http://pdir.de/contao-dd/Bootstrap-Mockup.png)
 
 
 System requirements
@@ -39,6 +39,11 @@ LGPL-3.0+
 
 ToDo
 ---------------
-* add active/inactive option for module to local config section
 * add all element type (now only text and headline)
-* add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
+
+
+History
+---------------
+[done] add select option for sets in default settings 
+[done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
+[done] add active/inactive option for module to local config section

@@ -1,6 +1,12 @@
 
 #advancedFormContainer h3 {
     margin-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+#advancedFormContainer h3:before {
+    color: #8A2BE2;
 }
 
 #advancedFormContainer .ac-w25 {
@@ -21,6 +27,14 @@
     width: 21%;
 }
 
+#advancedFormContainer .value:before {
+    font-size: 150%;
+    padding-top: 2px;
+    position: relative;
+    top: 2px;
+}
+
 #advancedFormContainer .value.select select {
-    width: 90%;
+    width: 84%;
+    margin-left: 1%;
 }

@@ -23,4 +23,17 @@ class AdvancedClassesHooks extends \Controller
             $objTemplate->class .= ' ' . $arrData['advancedCss'];
         }
     }
+
+    /*
+     * add the varibale for dataset source file to backend
+     */
+    public function extendBackendTemplate($strContent, $strTemplate)
+    {
+        if ($strTemplate == 'be_main')
+        {
+            $strScript = "<script>var advancedClassesSet = '".$GLOBALS['TL_CONFIG']['advancedClassesSet']."';</script>\n\r</body>";
+            return str_replace('</body>', $strScript, $strContent);
+        }
+        return $strContent;
+    }
 }
