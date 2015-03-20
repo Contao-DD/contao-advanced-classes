@@ -10,6 +10,7 @@ Screenshot
 -----------
 
 ![Setting classes for bootstrap](http://pdir.de/contao-dd/Bootstrap-Mockup.png)
+![Local settings](http://pdir.de/contao-dd/screenshot-settings-cac.png)
 
 
 System requirements
