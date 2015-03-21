@@ -44,11 +44,12 @@ LGPL-3.0+
 
 ToDo
 ---------------
-* add all element type (now only text and headline)
+* add other sets
 
 
 History
 ---------------
-[done] add select option for sets in default settings 
-[done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
-[done] add active/inactive option for module to local config section
+*[done] add basic elements
+*[done] add select option for sets in default settings 
+*[done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
+*[done] add active/inactive option for module to local config section
