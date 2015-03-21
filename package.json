@@ -1,6 +1,6 @@
 {
   "name": "contao-advanced-classes",
-  "version": "0.1.0beta",
+  "version": "0.1.1",
   "description": "Extend the css classes of Contao elements",
   "scripts": {},
   "repository": {
