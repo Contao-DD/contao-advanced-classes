@@ -7,7 +7,7 @@
       </trans-unit>
       <trans-unit id="MOD.advanced_classes.1">
         <source>Extend the css classes of Contao elements.</source>
-        <target>Erweietrt die CSS-Klassen der Contao Elemente.</target>
+        <target>Erweitert die CSS-Klassen der Contao Elemente.</target>
       </trans-unit>
       <trans-unit id="FMD.advanced_classes">
         <source>Advanced Classes</source>

@@ -65,29 +65,29 @@
                 // store current value on focus and on change
                 previous[this.id] = this.value;
             }).change(function() {
-                var advancedCss = $("#ctrl_advancedCss").val();
-                advancedCss = advancedCss.split(" ");
-                var del = advancedCss.indexOf(previous[this.id]);
+                var advancedCss = $("#ctrl_advancedCss");
+                var arrAdvancedCss = advancedCss.val().split(" ");
+                var del = arrAdvancedCss.indexOf(previous[this.id]);
                 if(this.value != "-" && previous[this.id] != "-") {
-                    advancedCss.splice(del, 1);
-                    advancedCss.push(this.value);
+                    arrAdvancedCss.splice(del, 1);
+                    arrAdvancedCss.push(this.value);
                 }
                 else if(this.value == "-" && previous[this.id] != "") {
-                    advancedCss.splice(del, 1);
+                    arrAdvancedCss.splice(del, 1);
                 } else
-                    advancedCss.push(this.value);
+                    arrAdvancedCss.push(this.value);
 
                 // write array to css class
-                advancedCss.val(advancedCss.join(" "));
+                advancedCss.val(arrAdvancedCss.join(" "));
                 // update the previous value
                 previous[this.id] = this.value;
             });
         },
         setSelectFieldsFromCss: function () {
-            var advancedCss = $("#ctrl_advancedCss").val();
+            var advancedCss = $("#ctrl_advancedCss");
             if(typeof advancedCss != "undefined") {
-                advancedCss = advancedCss.split(" ");
-                advancedCss.forEach(function (cssClass) {
+                var arrAdvancedCss = advancedCss.val().split(" ");
+                arrAdvancedCss.forEach(function (cssClass) {
                     $('#advancedFormContainer select option[value="' + cssClass + '"]').prop('selected', true).attr('selected', 'selected');
                 });
             }
