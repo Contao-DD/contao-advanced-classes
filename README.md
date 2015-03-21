@@ -6,6 +6,10 @@ About
 
 Extend the css classes of Contao elements.
 
+**Supported Entities**
+headline, text, list, table, accordion, slider, code, markdown, hyperlink, toplink, image, gallery, player, youtube, download, downloads, teaser, form, module 
+
+
 Screenshot
 -----------
 

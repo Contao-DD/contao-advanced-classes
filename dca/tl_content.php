@@ -11,8 +11,11 @@
 
 $dc = &$GLOBALS['TL_DCA']['tl_content'];
 
-$dc['palettes']['text'] = str_replace('space;', 'space;{advanced_classes_legend},advancedCss;', $dc['palettes']['text']);
-$dc['palettes']['headline'] = str_replace('space;', 'space;{advanced_classes_legend},advancedCss;', $dc['palettes']['headline']);
+foreach ($dc['palettes'] as $key=>$value) {
+    if(strpos($value,"space;")!==false) {
+        $dc['palettes'][$key] = str_replace('space;', 'space;{advanced_classes_legend},advancedCss;', $value);
+    }
+}
 
 $arrFields = array
 (
