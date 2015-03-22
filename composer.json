@@ -1,19 +1,24 @@
 {
   "name":"contao-dd/contao-advanced-classes",
   "description":"Extend the classes of Contao elements",
-  "keywords":["contao", "classes", "advanced", "bootstrap"],
+  "keywords":["contao", "classes", "advanced", "bootstrap", "css"],
   "type":"contao-module",
+  "homepage":"https://github.com/Contao-DD/contao-advanced-classes",
   "license":"LGPL-3.0+",
   "authors":[
     {
       "name":"Contao Stammtisch Dresden",
-      "homepage":"http://www.contao-dd.de",
+      "homepage":"http://www.gondao.de",
       "role":"Developer",
-      "email": "dev@contao-dd.de"
+      "email": "kontakt@gondao.de"
     }
   ],
-  "require":{
-    "contao/core":">=3.2,<=3.5"
+  "support":{
+    "issues":"https://github.com/Contao-DD/contao-advanced-classes/issues"
+  },
+  "require": {
+    "contao/core": ">=3.2,<4-dev",
+    "contao-community-alliance/composer-installer": "*"
   },
   "extra":{
     "contao": {
