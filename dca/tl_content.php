@@ -12,7 +12,7 @@
 $dc = &$GLOBALS['TL_DCA']['tl_content'];
 
 foreach ($dc['palettes'] as $key=>$value) {
-    if(strpos($value,"space;")!==false) {
+    if(!is_array ($value) && strpos($value,"space;")!==false) {
         $dc['palettes'][$key] = str_replace('space;', 'space;{advanced_classes_legend},advancedCss;', $value);
     }
 }
