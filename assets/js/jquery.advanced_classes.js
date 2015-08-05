@@ -5,7 +5,8 @@
             this.json = '';
             this.rootElem = $('#pal_advanced_classes_legend');
             if($('#ctrl_advancedCss').length) {
-                $.getJSON("system/modules/advanced_classes/assets/sets/bootstrap.json")
+                var sourceSet = advancedClassesSet || "bootstrap.json";
+                $.getJSON("system/modules/advanced_classes/assets/sets/" + sourceSet)
                     .done(function (json) {
                         AdvancedClasses.json = json;
                         AdvancedClasses.buildForm();
