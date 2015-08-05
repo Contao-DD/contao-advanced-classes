@@ -9,14 +9,15 @@
  * @license http://www.gnu.org/licences/lgpl-3.0.html LGPL
  */
 
-$dc = &$GLOBALS['TL_DCA']['tl_content'];
+/**
+ * Dynamically add the method addAdvancedCss
+ */
+$GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = array('AdvancedClassesContent','addAdvancedCss');
 
-foreach ($dc['palettes'] as $key=>$value) {
-    if(!is_array ($value) && strpos($value,"space;")!==false) {
-        $dc['palettes'][$key] = str_replace('space;', 'space;{advanced_classes_legend},advancedCss;', $value);
-    }
-}
-
+/**
+ * Prepare the field advancedCss
+ */
+$dca = &$GLOBALS['TL_DCA']['tl_content'];
 $arrFields = array
 (
     'advancedCss' => array
@@ -29,5 +30,29 @@ $arrFields = array
         'sql'                     => "varchar(255) NOT NULL default ''"
     ),
 );
+$dca['fields'] = array_merge($dca['fields'], $arrFields);
 
-$dc['fields'] = array_merge($dc['fields'], $arrFields);
+/**
+ * Provide miscellaneous methods that are used by the data configuration array.
+ *
+ * @author Mathias Arzberger <develop@pdir.de>
+ */
+Class AdvancedClassesContent extends Backend {
+
+    /**
+     * Add advancedCss field to all palettes, which included "space"
+     *
+     * @param DataContainer $dc
+     */
+    public function addAdvancedCss(DataContainer $dc) {
+
+        $dca = &$GLOBALS['TL_DCA']['tl_content'];
+        foreach ($dca['palettes'] as $key=>$value) {
+            if(!is_array ($value) && strpos($value,"space;")!==false) {
+                $dca['palettes'][$key] = str_replace('space;', 'space;{advanced_classes_legend},advancedCss;', $value);
+            }
+        }
+
+    }
+
+}
