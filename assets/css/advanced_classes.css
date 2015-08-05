@@ -17,6 +17,11 @@
     float: left;
 }
 
+#advancedFormContainer .ac-w33 {
+    width: 32% !important;
+    float: left;
+}
+
 #advancedFormContainer .ac-w50 {
     width: 50%;
     float: left;
