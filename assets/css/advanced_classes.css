@@ -12,23 +12,27 @@
     color: #8A2BE2;
 }
 
+#advancedFormContainer .ac-w20 {
+    width: 19%;
+    float: left;
+}
+
 #advancedFormContainer .ac-w25 {
-    width: 25%;
+    width: 24%;
     float: left;
 }
 
 #advancedFormContainer .ac-w33 {
-    width: 32% !important;
+    width: 31% !important;
     float: left;
 }
 
 #advancedFormContainer .ac-w50 {
-    width: 50%;
+    width: 49%;
     float: left;
 }
 
 #advancedFormContainer .value.select {
-    width: 24%;
     margin-right: 1%;
     background-color: #eee;
     padding: 2px;
@@ -41,17 +45,25 @@
 
 #advancedFormContainer .value.select:before {
     font-size: 18px;
-    width: 10%;
+    width: 12%;
     line-height: 25px;
     vertical-align: top;
 }
 
 #advancedFormContainer .value.select select {
-    width: 85%;
+    width: 83%;
     height: 25px;
 }
 #advancedFormContainer .value.select select option {
     padding: 4px 0;
+}
+
+#advancedFormContainer .value.icon-mobile.landscape.select:before {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
 }
 
 @media (max-width: 767px) {

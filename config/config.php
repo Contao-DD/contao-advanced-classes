@@ -17,7 +17,11 @@ $GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('\ContaoDD\AdvancedClass
  * Backend Javascript
  */
 if (TL_MODE == 'BE') {
-    $GLOBALS['TL_JAVASCRIPT']['jquery'] = 'assets/jquery/core/' . reset((scandir(TL_ROOT . '/assets/jquery/core', 1))) . '/jquery.min.js';
+    if (version_compare(VERSION, '4', '>=')) {
+        $GLOBALS['TL_JAVASCRIPT']['jquery'] = 'assets/jquery/js/' . reset((scandir(TL_ROOT . '/assets/jquery/js', 1))) . '/jquery.min.js';
+    } else {
+        $GLOBALS['TL_JAVASCRIPT']['jquery'] = 'assets/jquery/core/' . reset((scandir(TL_ROOT . '/assets/jquery/core', 1))) . '/jquery.min.js';
+    }
     $GLOBALS['TL_JAVASCRIPT']['noconflict'] = '/system/modules/advanced_classes/assets/js/jquery.noconflict.js';
     $GLOBALS['TL_JAVASCRIPT']['advanced_classes'] = '/system/modules/advanced_classes/assets/js/jquery.advanced_classes.js';
 }

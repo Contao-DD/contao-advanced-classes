@@ -11,7 +11,7 @@
 
 $dc = &$GLOBALS['TL_DCA']['tl_settings'];
 
-$dc['palettes']['default'] = str_replace('inactiveModules;', 'inactiveModules;{ac_legend},advancedClassesSet;', $dc['palettes']['default']);
+$dc['palettes']['default'] = str_replace('defaultChmod;', 'defaultChmod;{ac_legend},advancedClassesSet;', $dc['palettes']['default']);
 
 $arrFields = array
 (

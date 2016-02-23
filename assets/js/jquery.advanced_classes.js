@@ -5,6 +5,7 @@
             this.json = '';
             this.rootElem = $('#pal_advanced_classes_legend');
             if($('#ctrl_advancedCss').length) {
+                console.log(advancedClassesSet);
                 var sourceSet = advancedClassesSet || "bootstrap.json";
                 $.getJSON("system/modules/advanced_classes/assets/sets/" + sourceSet)
                     .done(function (json) {
