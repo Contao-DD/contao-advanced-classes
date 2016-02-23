@@ -49,11 +49,15 @@ ToDo
 
 History
 ---------------
-0.3.0
-* [done] add 5 column layout in backend
-* [done] add bootstrap 4 alpha set
-other
-* [done] add basic elements
-* [done] add select option for sets in default settings 
-* [done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
-* [done] add active/inactive option for module to local config section
+v0.3.0
+* add 5 column layout in backend
+* add bootstrap 4 alpha set
+
+v0.2.1
+* bugfix fixes #2
+
+before
+* add basic elements
+* add select option for sets in default settings 
+* add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
+* add active/inactive option for module to local config section
