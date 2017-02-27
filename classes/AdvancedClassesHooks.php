@@ -18,8 +18,8 @@ class AdvancedClassesHooks extends \Controller
      */
     public function extendCssClasses($objTemplate)
     {
-        if (isset($arrData['advancedCss']) && $arrData['advancedCss'] != '') {
-            $objTemplate->class .= ' ' . $arrData['advancedCss'];
+        if (isset($objTemplate->advancedCss) && $objTemplate->advancedCss != '') {
+            $objTemplate->class .= ' ' . $objTemplate->advancedCss;
         }
     }
 
