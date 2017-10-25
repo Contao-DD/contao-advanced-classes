@@ -46,9 +46,6 @@ class tl_settings_advanced_classes extends Backend
      */
     public function getAvailableSetFiles()
     {
-        $strDir = TL_ROOT . '/system/modules/advanced_classes/assets/sets/';
-        $arrFiles = preg_grep('~\.(json)$~', scandir($strDir));
-        $arrFiles = array_combine($arrFiles, $arrFiles);
-        return $arrFiles;
+        return $GLOBALS['TL_CONFIG']['advancedClassesSets'];
     }
 }
