@@ -46,6 +46,17 @@ class tl_settings_advanced_classes extends Backend
      */
     public function getAvailableSetFiles()
     {
-        return $GLOBALS['TL_CONFIG']['advancedClassesSets'];
+        $arrSets = array();
+        foreach ($GLOBALS['TL_CONFIG']['advancedClassesSets'] as $key => $value)
+        {
+            if(!strpos($value,"system/")!==false)
+            {
+                $arrSets[$value] = basename( $value ) . ' (custom)';
+                continue;
+            }
+            $arrSets[$value] = basename( $value );
+
+        }
+        return $arrSets;
     }
 }

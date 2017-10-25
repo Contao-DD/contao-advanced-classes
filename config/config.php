@@ -1,6 +1,6 @@
 <?php
 
-$modulePath = TL_ROOT . 'system/modules/advanced_classes/';
+$modulePath = '/system/modules/advanced_classes/';
 
 /**
  * General settings
@@ -11,7 +11,7 @@ $GLOBALS['TL_CONFIG']['advancedClassesSet'] = 'both';
 /**
  * add default sets
  *
- * hint: add update save json files via own extension or use default config file
+ * hint: add update save json files via own extension or use default localconfig.php file
  * use $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = TL_ROOT . 'files/theme/myCssSet.json';
  *
  */
