@@ -12,7 +12,7 @@ $GLOBALS['TL_CONFIG']['advancedClassesSet'] = 'both';
  * add default sets
  *
  * hint: add update save json files via own extension or use default localconfig.php file
- * use $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = TL_ROOT . 'files/theme/myCssSet.json';
+ * use $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = '/files/theme/myCssSet.json';
  *
  */
 if(TL_MODE == 'BE')
