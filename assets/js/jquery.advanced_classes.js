@@ -15,7 +15,6 @@
                         AdvancedClasses.hideAdvancedCssInput();
                     }).fail(function (jqxhr, textStatus, error) {
                         var err = textStatus + ", " + error;
-                        console.log("Request Failed: " + err);
                     });
             }
         },
@@ -70,9 +69,6 @@
                 var advancedCss = $("#ctrl_advancedCss");
                 var arrAdvancedCss = advancedCss.val().split(" ");
                 var del = arrAdvancedCss.indexOf(previous[this.id]);
-                console.log('ID: '+this.id);
-                console.log('VALUE: '+this.value);
-                console.log('DEL: '+del);
                 if(this.value != "-" && previous[this.id] != "-") {
                     arrAdvancedCss.splice(del, 1);
                     arrAdvancedCss.push(this.value);
@@ -98,7 +94,6 @@
         setSelectFieldsFromCss: function () {
             var advancedCss = $("#ctrl_advancedCss");
             if(typeof advancedCss != "undefined") {
-                console.log(advancedClassesSet);
                 var prefix = '';
                 var lastClass = '';
                 var arrAdvancedCss = advancedCss.val().split(" ");
