@@ -41,8 +41,17 @@
                     if (value.type == 'select') {
                         var select = '<div class="value ' + value.class + ' ' + value.type + '" for="advanced-form-' + value.id + '"><select id="advanced-form-' + value.id + '" name="advanced-form-' + value.id + '" class="tl_select tl_chosen"><option>-</option></option></select></div>';
                         $("#" + section.secId).append(select);
+                        var i = 1;
                         Object.keys(value.values).forEach(function (optKey) {
                             AdvancedClasses.formHelperGetOption(value.values[optKey], "#advanced-form-" + value.id);
+
+                            if(defaultColumnWidth == 1 && value.id == "columnSetSizeSelect1") {
+                                if(i == 12) {
+                                    var selected = value.values[optKey].value;
+                                    $("#advanced-form-columnSetSizeSelect1").val(selected);
+                                }
+                                ++i;
+                            }
                         });
                     }
 
@@ -112,10 +121,10 @@
         hideAdvancedCssInput: function() {
             this.rootElem.children("div").first().hide();
         }
-    }
+    };
 
     $(document).ready(function () {
-        AdvancedClasses.onReady()
+        AdvancedClasses.onReady();
     });
 
 })(jQuery);
