@@ -51,6 +51,9 @@ if (TL_MODE == 'BE' & !$GLOBALS['TL_JAVASCRIPT']['jquery']) {
  * Css
  */
 if (TL_MODE == 'BE') {
-    $GLOBALS['TL_CSS']['advanced_classes'] = $modulePath . 'assets/css/advanced_classes.css';
-    $GLOBALS['TL_CSS']['font-awesome'] = $modulePath . 'assets/vendor/fontello/css/icon.css';
+    if($GLOBALS['TL_CONFIG']['ac_disableCSS'] == 0) {
+        $GLOBALS['TL_CSS']['advanced_classes'] = $modulePath . 'assets/css/advanced_classes.css';
+        $GLOBALS['TL_CSS']['font-awesome'] = $modulePath . 'assets/vendor/fontello/css/icon.css';
+    }
+    $GLOBALS['TL_CSS']['advanced_classes_settings'] = $modulePath . 'assets/css/advanced_classes_settings.css';
 }

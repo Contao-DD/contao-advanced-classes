@@ -1,0 +1,8 @@
+#pal_ac_legend .cbx {
+    overflow: hidden;
+    clear: left;
+}
+
+#pal_ac_legend .w50 .tl_help {
+    margin-right: 0;
+}

@@ -21,6 +21,10 @@
         <source>Activate Default Column Width</source>
         <target>Hier können Sie einen Standardwert für die Spaltenbreite aktivieren (Standard = 12)</target>
       </trans-unit>
+      <trans-unit id="tl_settings.ac_disableCSS.0">
+        <source>Disable Module CSS</source>
+        <target>Deaktiviere moduleigenes CSS</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

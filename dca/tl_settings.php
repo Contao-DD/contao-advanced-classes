@@ -11,7 +11,7 @@
 
 $dc = &$GLOBALS['TL_DCA']['tl_settings'];
 
-$dc['palettes']['default'] = str_replace('defaultChmod;', 'defaultChmod;{ac_legend},advancedClassesSet,ac_defaultColumnWidth;', $dc['palettes']['default']);
+$dc['palettes']['default'] = str_replace('defaultChmod;', 'defaultChmod;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
 
 $arrFields = array
 (
@@ -26,6 +26,12 @@ $arrFields = array
     'ac_defaultColumnWidth' => array
     (
         'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['ac_defaultColumnWidth'],
+        'inputType'               => 'checkbox',
+        'eval'                    => array('tl_class'=>'w50')
+    ),
+    'ac_disableCSS' => array
+    (
+        'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['ac_disableCSS'],
         'inputType'               => 'checkbox',
         'eval'                    => array('tl_class'=>'w50')
     )
