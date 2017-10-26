@@ -5,9 +5,8 @@
             this.json = '';
             this.rootElem = $('#pal_advanced_classes_legend');
             if($('#ctrl_advancedCss').length) {
-                console.log(advancedClassesSet);
                 var sourceSet = advancedClassesSet || "bootstrap.json";
-                $.getJSON("system/modules/advanced_classes/assets/sets/" + sourceSet)
+                $.getJSON(sourceSet)
                     .done(function (json) {
                         AdvancedClasses.json = json;
                         AdvancedClasses.buildForm();
@@ -62,7 +61,8 @@
             $(parentElem).append(option);
         },
         onChangeSelectFields: function () {
-            var previous = [];
+            var previous = [],
+                prefix = '';
             $("#advancedFormContainer select").on('focus', function () {
                 // store current value on focus and on change
                 previous[this.id] = this.value;
@@ -70,12 +70,22 @@
                 var advancedCss = $("#ctrl_advancedCss");
                 var arrAdvancedCss = advancedCss.val().split(" ");
                 var del = arrAdvancedCss.indexOf(previous[this.id]);
+                console.log('ID: '+this.id);
+                console.log('VALUE: '+this.value);
+                console.log('DEL: '+del);
                 if(this.value != "-" && previous[this.id] != "-") {
                     arrAdvancedCss.splice(del, 1);
                     arrAdvancedCss.push(this.value);
                 }
                 else if(this.value == "-" && previous[this.id] != "") {
+                    if(advancedClassesSet == 'materialize.json') {// fix for materializecss
+                        // if(this.value.indexOf('.s') === -1 || this.value.indexOf('.m') === -1 || this.value.indexOf('.l') === -1)
+
+                    }
+                    console.log('PREV: '+previous[this.id]);
+                    console.log(arrAdvancedCss);
                     arrAdvancedCss.splice(del, 1);
+                    console.log(arrAdvancedCss);
                 } else
                     arrAdvancedCss.push(this.value);
 
@@ -88,9 +98,19 @@
         setSelectFieldsFromCss: function () {
             var advancedCss = $("#ctrl_advancedCss");
             if(typeof advancedCss != "undefined") {
+                console.log(advancedClassesSet);
+                var prefix = '';
+                var lastClass = '';
                 var arrAdvancedCss = advancedCss.val().split(" ");
                 arrAdvancedCss.forEach(function (cssClass) {
-                    $('#advancedFormContainer select option[value="' + cssClass + '"]').prop('selected', true).attr('selected', 'selected');
+                    if(advancedClassesSet == 'materialize.json') {// fix for materializecss
+                        if(cssClass.indexOf('.s') === -1 || cssClass.indexOf('.m') === -1 || cssClass.indexOf('.l') === -1)
+                            prefix = 'col ';
+                    }
+                    $('#advancedFormContainer select option[value="' + prefix + cssClass + '"]')
+                        .prop('selected', true)
+                        .attr('selected', 'selected');
+                    lastClass = cssClass;
                 });
             }
         },
