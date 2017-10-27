@@ -87,10 +87,7 @@
                         // if(this.value.indexOf('.s') === -1 || this.value.indexOf('.m') === -1 || this.value.indexOf('.l') === -1)
 
                     }
-                    console.log('PREV: '+previous[this.id]);
-                    console.log(arrAdvancedCss);
                     arrAdvancedCss.splice(del, 1);
-                    console.log(arrAdvancedCss);
                 } else
                     arrAdvancedCss.push(this.value);
 
