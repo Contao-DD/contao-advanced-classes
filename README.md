@@ -13,14 +13,14 @@ headline, text, list, table, accordion, slider, code, markdown, hyperlink, topli
 Screenshot
 -----------
 
-![Setting classes for bootstrap](http://pdir.de/contao-dd/Bootstrap-Mockup.png)
-![Local settings](http://pdir.de/contao-dd/screenshot-settings-cac.png)
+![Setting classes for bootstrap](http://pdir.de/contao-dd/advanced-classes-screenshot1-contao3.png)
+![Local settings](http://pdir.de/contao-dd/advanced-classes-screenshot2-contao3.png)
 
 
 System requirements
 -------------------
 
-* [Contao](https://github.com/contao/core) 3.2.16 or higher
+* [Contao](https://github.com/contao/core) 3.2.16 - 3.x
 
 Installation & Configuration
 ----------------------------
@@ -49,6 +49,12 @@ ToDo
 
 History
 ---------------
+v0.4.0
+* new feature: default value for column widths
+* new feature: disable module CSS
+* add bootstrap 4 beta set
+* update bootstrap 4 alpha set
+
 v0.3.0
 * add 5 column layout in backend
 * add bootstrap 4 alpha set
