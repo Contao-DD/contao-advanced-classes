@@ -7,6 +7,7 @@ Das Modul erweitert die CSS-Klassen der Contao Elemente durch selbst definierbar
 
 Für Bootstrap wird bereits ein vordefiniertes Set für Spaltenbreite, Spalten-Offset, Reihenfolge (Pull/Push) und Sichtbarkeit mitgeliefert.
 
+Für Contao 4 nutze bitte unser Bundle unter https://github.com/Contao-DD/advanced-classes-bundle oder den Contao Manager.
 
 About
 -----
@@ -16,6 +17,7 @@ Extend the css classes of Contao elements.
 **Supported Entities**
 headline, text, list, table, accordion, slider, code, markdown, hyperlink, toplink, image, gallery, player, youtube, download, downloads, teaser, form, module 
 
+For Contao 4, please use our bundle at https://github.com/Contao-DD/advanced-classes-bundle or the Contao Manager.
 
 Screenshot
 -----------
